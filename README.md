@@ -1,4 +1,4 @@
-# com.icyrock.clojure run -m com.icyrock
+# com.icyrock.clojure
 
 Some [Clojure](http://clojure.org) programs.
 
