@@ -129,9 +129,9 @@
   (let [c (Calendar/getInstance)
         h (.get c Calendar/HOUR_OF_DAY)
         m (.get c Calendar/MINUTE)
-        s (.get c Calendar/SECOND)
-        ]
+        s (.get c Calendar/SECOND)]
     (format "%02d:%02d:%02d" h m s)))
+
 (defn paint-lcd-symbol [c g]
   (try
     (let [symbols (get-time-string)
