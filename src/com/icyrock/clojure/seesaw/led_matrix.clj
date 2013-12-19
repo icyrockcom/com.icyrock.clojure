@@ -115,10 +115,14 @@
     "....."]
    })
 
+; Assuming all the symbol bitmaps have the same size
+(def dot-spec-width (count (first (lcd-symbol-dots \0))))
+(def dot-spec-height (count (lcd-symbol-dots \0)))
+
 (defn draw-lcd-symbol [g width height symbol]
   (let [dots (lcd-symbol-dots symbol)
-        dot-width (/ width (count (first dots)))
-        dot-height (/ height (count dots))]
+        dot-width (/ width dot-spec-width)
+        dot-height (/ height dot-spec-height)]
     (doseq [row dots]
       (doseq [cell row]
         (draw-lcd-dot g dot-width dot-height (= cell \*))
