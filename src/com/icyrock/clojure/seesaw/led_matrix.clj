@@ -121,7 +121,7 @@
 
 (defn draw-lcd-symbol [g width height symbol]
   (let [dots (lcd-symbol-dots symbol)
-        dot-width (/ width dot-spec-width))
+        dot-width (/ width dot-spec-width)
         dot-height (/ height dot-spec-height)]
     (doseq [row dots]
       (doseq [cell row]
